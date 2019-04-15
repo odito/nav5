@@ -1,0 +1,266 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    
+}
+
+
+.logoBasic{
+    padding:5px;
+}
+.logo{
+    width: 40px;
+    margin-left: 10px;
+
+}
+.logo img{
+    width:40px;
+     margin-top: 2px;
+}
+
+
+.menu-area{
+   
+    
+    background: #333;
+    align-self: center;
+   
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-area ul li ul{
+    -moz-transition: all 300ms ease-in-out 300ms;
+    transition:all 300ms ease-in-out 300ms;
+     -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+     -moz-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+     backface-visibility: hidden;
+
+     position: absolute;
+    
+    padding-top:10px;
+   
+    
+    text-align:left;
+   
+   
+
+}
+
+.menu-area ul li:hover ul{
+     -moz-transition: all 300ms ease-in-out 0ms;
+       transition:all 300ms ease-in-out 0ms;
+      -moz-transform: rotateX(0deg);
+       transform: rotateX(0deg);
+}
+
+.menu-area ul{
+    padding:0px;
+    color:rgb(214, 207, 207);
+    background: #333;
+    perspective: 300px;
+    transform-style: preserve-3d;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    margin-right: 20px;
+    width:100%;
+    height:auto;
+}
+ .open {
+    height:auto;
+}
+
+.menu-area ul:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.menu-area ul li{
+    
+    float: left;
+    transform-style: preserve-3d;
+    perspective: 300px;
+    //border-right: 1px solid #fff;
+    
+  
+}
+
+
+.menu-area ul li:last-of-type{
+    border-right: none;
+}
+
+.menu-area ul li:hover{
+//background: #fff;
+}
+
+.menu-area ul li:hover >a{
+    color: #fff;
+}
+
+.menu-area ul li a{
+    display: block;
+    padding: 5px 25px;
+    text-transform: uppercase;
+    
+}
+
+
+.menu-area ul li ul li{
+    float: none;
+    position: relative;
+      border:none;
+}
+
+.menu-area ul li ul li a{
+    padding: 10px 30px;
+   
+    
+}
+
+
+.logoBtn .bar{
+    width:30px;
+    height: 3px;
+    background: rgb(211, 208, 208);
+    margin: 4px;
+
+}
+
+
+
+.logoBtn .btn{
+    border: 1px solid red;
+    display: none;
+}
+
+.fa-caret-down{
+    margin-left:5px;
+}
+
+@media screen and (max-width:575px){
+nav{
+    display: block;
+    
+
+}
+
+
+
+.menu-area ul{
+  
+     display: block;
+    margin-right: 0px;
+    width: 100%;
+    height:0;
+    overflow: hidden;
+      transition: all 1s ease;
+}
+
+ .menu-area ul.open{
+    height: 198px;
+}
+
+
+.menu-area ul li{
+    
+    float: none;
+    transform-style: preserve-3d;
+    perspective: 0;
+    border-right: none;
+    position: relative ;
+   
+  
+}
+
+
+
+
+
+
+
+.menu-area ul li  ul   {
+    position: absolute;
+  
+    padding-top:0px;
+    background: rgb(134, 83, 83);
+    border-top:0;
+    margin:0;
+    height: auto;
+}
+
+.menu-area ul li:hover  ul   {
+   
+    display: block;
+     
+    
+}
+
+.menu-area ul li  ul li  {
+ 
+    display: block;
+    width:100%;
+    padding-top:0px;
+    background: rgb(134, 83, 83);
+    border-top:0;
+    margin:0;
+    
+    
+}
+
+
+.menu-area ul li a{
+    
+    padding: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+.logoBtn .logo{
+    margin-left: 10px;
+}
+
+
+
+.logoBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* margin:0 10px 0 10px; */
+    border-bottom:1px solid rgb(158, 156, 156);
+}
+.logoBtn .btn{
+    border: 1px solid rgb(187, 183, 183);
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+
+
+}
